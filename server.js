@@ -14,7 +14,7 @@ const commands = {
 }
 
 const client = new tmi.Client({
-	channels: [ 'bongokaibot' ],
+	channels: [ 'kaikendoh' ],
     identity: {
         username: process.env.TWITCH_BOT_USERNAME,
         password: process.env.TWITCH_OAUTH_TOKEN

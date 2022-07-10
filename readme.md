@@ -1,1 +1,1 @@
-Basic twitch bot test connected to bongokaibot twitch channel
+Basic twitch bot test connected to BongoKaiBOT twitch channel

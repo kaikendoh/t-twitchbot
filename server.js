@@ -5,8 +5,8 @@ const tmi = require('tmi.js');
 const regexpCommand = new RegExp(/^!([a-zA-Z0-9]+)(?:\W+)?(.*)?/);
 
 const commands = {
-    website:{
-        response: "I don't have a website to share yet"
+    hello:{
+        response: "GivePLZ Hello~! TakeNRG"
     },
     upvote: {
         response: (user) => `User ${user} was just upvoted`
@@ -14,7 +14,7 @@ const commands = {
 }
 
 const client = new tmi.Client({
-	channels: [ 'bongokaibot' ],
+	channels: [ 'bongokaibot', 'kaikendoh' ],
     identity: {
         username: process.env.TWITCH_BOT_USERNAME,
         password: process.env.TWITCH_OAUTH_TOKEN

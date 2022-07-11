@@ -9,7 +9,7 @@ const commands = {
         response: "GivePLZ Hello~! TakeNRG"
     },
     upvote: {
-        response: (user) => `User ${user} was just upvoted`
+        response: (argument) => `User ${argument} was just upvoted`
     }
 }
 

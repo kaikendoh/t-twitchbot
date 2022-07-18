@@ -10,6 +10,9 @@ const commands = {
     },
     upvote: {
         response: (argument) => `User ${argument} was just upvoted`
+    },
+    echo: {
+        response: (command, argument) => `Command "${command}" found with argument "${argument}"`
     }
 }
 
@@ -30,10 +33,16 @@ client.on('message', (channel, tags, message, self) => {
 
     const [raw, command, argument] = message.match(regexpCommand);
 
+    console.log(raw);
+    console.log(command);
+    console.log(argument);
+
     const {response} = commands[command] || {};
+    
+    console.log(response);
 
     if (typeof response === 'function') {
-        client.say(channel, response(tags.username))
+        client.say(channel, response(argument))
     } else if (typeof response === 'string'){
         client.say(channel, response);
     }
